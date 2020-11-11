@@ -1,0 +1,48 @@
+﻿@model HomeViewModel
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-bell">
+                <div class="cssload-circle">
+                    <div class="cssload-inner"></div>
+                </div>
+                <div class="cssload-circle">
+                    <div class="cssload-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<section class="section section-custom-1 bg-img-1 section-intro">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8 text-left">
+                <div class="text-big">
+                    Delicious
+                </div>
+                <div class="text-spacing-200">
+                    <h2 style="font-weight:bolder">cakes for you</h2>
+                </div>
+                <h4 class="text-spacing-100 text-grey-600 font-weight-normal">
+                    <p>
+                        Sweet Bakery offers the best
+                        <br />cakes and sweets for you.</br>
+                </h4>
+                <a class="button mt-4 button-lg button-shadow-2 text-decoration-none button-primary button-zakaria wow fadeInUp" href="#" style="visibility: visible;">
+                    Shop now
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="productsList">
+    <h2>Pies of the week</h2>
+    <h6>Our weekly selection - just for you!</h6>
+
+    @foreach (var pie in Model.PiesOfTheWeek)
+    {
+            <partial name="_PieCard" model="pie" />   
+    }
+</div>
+   

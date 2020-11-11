@@ -1,0 +1,38 @@
+﻿@model ShoppingCartViewModel
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="p-2">
+                <h4>Shopping cart</h4>
+            </div>
+            @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+            {
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white mt-4 px-3 rounded">
+                    <div class="mr-1"><img class="rounded" src="@line.Pie.ImageThumbnailUrl" width="90"></div>
+                    <div class="d-flex flex-column align-items-start product-details" style="width:200px">
+                        <span class="font-weight-bold">
+                            @line.Pie.Name
+                        </span>
+                        <div class="d-flex flex-row product-desc grey">
+                            <div class="size mr-1"><span class="text-grey">Price:</span>
+                                <span class="font-weight-bold">
+                                    @line.Pie.Price.ToString("c")
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center qty">
+                        <i class="fa fa-minus text-danger"></i>
+                        <h5 class="text-grey mt-1 mr-1 ml-1">@line.Amount</h5><i class="fa fa-plus text-success"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-grey">@((line.Amount * line.Pie.Price).ToString("c"))</h5>
+                    </div>
+                    <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
+                </div>
+            }
+            <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><input type="text" class="form-control border-0 gift-card focus" placeholder="discount code"><button class="btn text-decoration-none button button-default-outline-2 button-zakaria" type="button">Apply</button></div>
+            <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><a asp-controller="Order" asp-action="Checkout" class="button mt-4 button-lg button-shadow-2 text-decoration-none button-primary button-zakaria btn-block pay-button">Proceed to Pay  @Model.ShoppingCartTotal.ToString("c")</a></div>
+        </div>
+    </div>
+</div>

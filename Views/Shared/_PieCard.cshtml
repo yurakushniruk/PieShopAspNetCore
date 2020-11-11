@@ -1,0 +1,32 @@
+﻿@model Pie
+    <div class="product-column">
+        <article class="box-info-modern box-info-modern-figure">
+            <a bs-toggle-modal="simpleModal" asp-controller="Pie"
+               asp-action="Details"
+               asp-route-id="@Model.PieId">
+                <img class="inner-img" src="@Model.ImageThumbnailUrl" alt="">
+            </a>
+            <h6 class="box-info-modern-title">
+                <a bs-toggle-modal="simpleModal" asp-controller="Pie"
+                   asp-action="Details"
+                   asp-route-id="@Model.PieId">
+                    @Model.Name
+                </a>
+                
+            </h6>
+            <div class="box-info-modern-text">@Model.ShortDescription</div>
+            <div class="box-info-modern-details">
+                <span class="box-info-modern-price">$@Model.Price</span>
+                <a asp-controller="ShoppingCart"
+                   asp-action="AddToShoppingCart"
+                   asp-route-pieId="@Model.PieId">
+                    <div class="box-info-modern-link shopping-cart-icon"></div>
+                </a>
+            </div>
+        </article>
+    </div>
+    <modal id="simpleModal">
+        <modal-body>
+            <partial name="_Details" model="@Model" />
+        </modal-body>
+    </modal>

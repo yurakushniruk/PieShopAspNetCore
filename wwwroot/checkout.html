@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sweet Bakery | Home</title>
+
+    <link rel="stylesheet" href="lib/twitter-bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Great+Vibes&family=Poppins&family=Rokkitt:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="content/site.css">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+</head>
+<body class="bg-white">
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-bell">
+                <div class="cssload-circle">
+                    <div class="cssload-inner"></div>
+                </div>
+                <div class="cssload-circle">
+                    <div class="cssload-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <header>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 row row-cols-2">
+                        <div class="col-sm-1 col-lg-5 text-right">
+                            <i class="fas fa-map-marker-alt fa-2x text-left" style="color: #c14679"></i>
+                        </div>
+                        <div class="col-sm-8 col-lg-7 text-left hoverable">
+                            523 Sylvan Ave<br />
+                            Mountain View, CA 94041 USA
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-4 text-center mt-4 mt-lg-0">
+                        <img src="Images/logo-default-231x49.png" />
+                    </div>
+                    <div class="col-sm-3 col-lg-4 text-center mt-4 mt-lg-0">
+                        <a class="text-decoration-none button button-sm button-icon button-icon-left button-default-outline-3 button-zakaria"><span class="icon mdi mdi-email-outline far fa-envelope"></span>Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid mt-4">
+            <div class="row navbar-top">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-md navbar-light bg-white" role="navigation">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto mt-2 mt-lg-0">
+                                <a asp-controller="Home" class="nav-item nav-link active" asp-action="Index">Home</a>
+                                <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
+                            </div>
+                            <div>
+                                <a class="shopping-cart-nav shopping-cart-icon" data-toggle="dropdown"></a>
+                            </div>
+                            <div class="dropdown form-inline my-2 my-lg-0">
+                                <a class="user-icon-nav user-icon" data-toggle="dropdown"></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">
+                                        Hello User!
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><i class="fas fa-user"></i> Profile</a>
+                                    </li>
+                                    <li>
+                                        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page(" /Index", new { area="" })" method="post" id="logoutForm" class="">
+                                            <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section class="section section-custom-1 bg-img-1 section-intro">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8 text-left">
+                        <div class="text-big">
+                            Delicious
+                        </div>
+                        <div class="text-spacing-200">
+                            <h2 style="font-weight:bolder">cakes for you</h2>
+                        </div>
+                        <h4 class="text-spacing-100 text-grey-600 font-weight-normal">
+                            <p>
+                                Sweet Bakery offers the best
+                                <br />cakes and sweets for you.</br>
+                        </h4>
+                        <a class="button mt-4 button-lg button-shadow-2 text-decoration-none button-primary button-zakaria wow fadeInUp" href="#" style="visibility: visible;">
+                            Shop now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="productsList">
+            <div class="product-column">
+                <article class="box-info-modern box-info-modern-figure">
+                    <a href="#">
+                        <img class="inner-img" src="https://gillcleerenpluralsight.blob.core.windows.net/files/blueberrycheesecakesmall.jpg" alt="">
+                    </a>
+                    <h6 class="box-info-modern-title"><a href="#">BLUEBERRY CHEESE CAKE</a></h6>
+                    <div class="box-info-modern-text">You'll love it!</div>
+                    <div class="box-info-modern-details">
+                        <span class="box-info-modern-price">$12.50</span>
+                        <a class="" href="#">
+                            <div class="box-info-modern-link shopping-cart-icon"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="product-column">
+                <article class="box-info-modern box-info-modern-figure">
+                    <a href="#"><img src="https://gillcleerenpluralsight.blob.core.windows.net/files/cranberrypiesmall.jpg" alt=""></a>
+                    <h6 class="box-info-modern-title"><a href="#">CRANBERRY PIE</a></h6>
+                    <div class="box-info-modern-text">A winter favorite</div>
+                    <div class="box-info-modern-details">
+                        <span class="box-info-modern-price">$10.50</span>
+                        <a class="" href="#">
+                            <div class="box-info-modern-link shopping-cart-icon"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="product-column">
+                <article class="box-info-modern box-info-modern-figure">
+                    <a href="#"><img src="https://gillcleerenpluralsight.blob.core.windows.net/files/peachpiesmall.jpg" alt=""></a>
+                    <h6 class="box-info-modern-title"><a href="#">PEACH PIE</a></h6>
+                    <div class="box-info-modern-text">Sweet as peach</div>
+                    <div class="box-info-modern-details">
+                        <span class="box-info-modern-price">$18.50</span>
+                        <a class="" href="#">
+                            <div class="box-info-modern-link shopping-cart-icon"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script src="content/script.js"></script>
+</body>
+</html>
