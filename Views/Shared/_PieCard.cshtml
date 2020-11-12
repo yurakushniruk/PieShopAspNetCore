@@ -1,13 +1,13 @@
 ﻿@model Pie
     <div class="product-column">
         <article class="box-info-modern box-info-modern-figure">
-            <a bs-toggle-modal="simpleModal" asp-controller="Pie"
+            <a bs-toggle-modal="pieModal" asp-controller="Pie"
                asp-action="Details"
                asp-route-id="@Model.PieId">
                 <img class="inner-img" src="@Model.ImageThumbnailUrl" alt="">
             </a>
             <h6 class="box-info-modern-title">
-                <a bs-toggle-modal="simpleModal" asp-controller="Pie"
+                <a bs-toggle-modal="pieModal" asp-controller="Pie"
                    asp-action="Details"
                    asp-route-id="@Model.PieId">
                     @Model.Name
@@ -25,8 +25,18 @@
             </div>
         </article>
     </div>
-    <modal id="simpleModal">
-        <modal-body>
-            <partial name="_Details" model="@Model" />
-        </modal-body>
-    </modal>
+    <div id="pieModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <partial name="_Details" model="@Model" />
+                </div>
+            </div>
+        </div>
+    </div>
