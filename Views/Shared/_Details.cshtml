@@ -1,28 +1,17 @@
 ﻿@model Pie
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <img class="img-fluid" src="@Model.ImageUrl" alt="@Model.Name">
-            </div>
 
-            <div class="col-md-4 text-left">
-                <h3 class="my-3">@Model.Name</h3>
-                <h5>@Model.ShortDescription</h5>
-                <p>@Model.LongDescription</p>
-                <h3 class="my-3">Details</h3>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul>
-                <div class="addToCart">
-                    <p class="button">
-                        <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
-                           asp-route-pieId="@Model.PieId">Add to cart</a>
-                    </p>
-                </div>
-            </div>
-
+    <img alt="@Model.Name" src="@Model.ImageUrl" width="400">
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Price</h3>
+        <h3>
+            <a href="#">@Model.Name</a>
+        </h3>
+        <h4>@Model.ShortDescription</h4>
+        <p>@Model.LongDescription</p>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                   asp-route-pieId="@Model.PieId">Add to cart</a>
+            </p>
         </div>
     </div>
