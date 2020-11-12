@@ -1,6 +1,5 @@
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\BethanysPieShop.exe
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\BethanysPieShop.deps.json
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\BethanysPieShop.runtimeconfig.json
@@ -183,3 +182,4 @@ C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Details.cshtml.g.cs
+C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\BethanysPieShop.styles.css
