@@ -586,10 +586,7 @@ h1, h2, h3, h4, h5, h6, [class^='heading-'] {
 
 .productsList {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 15px 0;
     text-align: center;
     display: inline-block;
 }
@@ -601,7 +598,7 @@ h1, h2, h3, h4, h5, h6, [class^='heading-'] {
     width: 320px;
     padding: 0 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin: 20px 0;
     display: inline-block;
 }
 

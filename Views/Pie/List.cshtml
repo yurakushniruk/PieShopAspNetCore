@@ -1,8 +1,11 @@
 ﻿@model PiesListViewModel
 
-<h1>@Model.CurrentCategory</h1>
+<div class="productsList">
+    <h1>@Model.CurrentCategory</h1>
 
-@foreach (var pie in Model.Pies)
-{
-    <partial name="_PieCard" model="pie"/>
-}
+
+        @foreach (var pie in Model.Pies)
+        {
+            <partial name="_PieCard" model="pie" />
+        }
+</div>
