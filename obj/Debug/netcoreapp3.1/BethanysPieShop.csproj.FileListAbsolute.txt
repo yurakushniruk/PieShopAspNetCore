@@ -181,3 +181,5 @@ C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\BethanysPieShop.styles.css
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.csprojAssemblyReference.cache
+C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\Utility.dll
+C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\bin\Debug\netcoreapp3.1\Utility.pdb

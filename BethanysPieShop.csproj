@@ -16,4 +16,8 @@
     <PackageReference Include="TagHelperSamples.Bootstrap" Version="2.0.49" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
 </Project>
