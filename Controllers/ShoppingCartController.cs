@@ -41,16 +41,6 @@ namespace BethanysPieShop.Controllers
             if (selectedPie != null)
             {
                 _shoppingCart.AddToCart(selectedPie, 1);
-                int? count = HttpContext.Session.GetInt32("Total");
-                if (count != null)
-                {
-                    count++;
-                    HttpContext.Session.SetInt32("Total", count.GetValueOrDefault());
-                }
-                else
-                {
-                    HttpContext.Session.SetInt32("Total", 1);
-                }
             }
             return RedirectToAction("Index");
         }

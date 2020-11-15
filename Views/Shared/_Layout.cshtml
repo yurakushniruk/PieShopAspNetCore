@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
+@using Utility 
+@inject ShoppingCart cart
 
 <!DOCTYPE html>
 
@@ -55,17 +57,8 @@
                             <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
                         </div>
                         <div>
-                            @if (HttpContextAccessor.HttpContext.Session.GetInt32("Total") != null)
-                            {
-                                var count = HttpContextAccessor.HttpContext.Session.GetInt32("Total");
-
-                                <span>@count</span>
-                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon" data-toggle="dropdown"></a>
-                            }
-                            else
-                            {
-                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon" data-toggle="dropdown"></a>
-                            }
+                                <span>@cart.ShoppingCartItems.Sum(x=>x.Amount)</span>
+                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
                         </div>
                         <partial name="_LoginPartial" />
                     </div>
