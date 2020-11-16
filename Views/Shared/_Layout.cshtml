@@ -1,8 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
-@using Utility 
+@using Utility
 @inject ShoppingCart cart
-
+@if (IsSectionDefined("Styles"))
+{
+    @RenderSection("Styles")
+}
 <!DOCTYPE html>
 
 <html>
@@ -57,8 +60,17 @@
                             <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
                         </div>
                         <div>
-                                <span>@cart.ShoppingCartItems.Sum(x=>x.Amount)</span>
-                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
+                            @{
+                                if (cart != null)
+                                {
+                                    var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
+                                    if (cartTotalItems != 0)
+                                    {
+                                        <span>@cartTotalItems</span>
+                                    }
+                                }
+                            }
+                            <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
                         </div>
                         <partial name="_LoginPartial" />
                     </div>
