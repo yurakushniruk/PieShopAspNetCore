@@ -27,7 +27,9 @@
     <header>
         <div class="container-fluid mt-4 p-0">
             <div class="row">
-                <div class="col-sm-4 col-lg-4">                    
+                <div class="col-lg-1">
+                </div>
+                <div class="col-sm-3 col-lg-3">
                     <i class="fas fa-map-marker-alt fa-2x text-left float-left mr-2" style="color: #c14679"></i>
                     523 Sylvan Ave<br />
                     Mountain View, CA 94041 USA
@@ -35,40 +37,46 @@
                 <div class="col-sm-4 col-lg-4 text-center mt-lg-0">
                     <a asp-controller="Home" asp-action="Index"><img src="~/Images/logo-default-231x49.png" /></a>
                 </div>
-                <div class="col-sm-4 col-lg-4 text-right mt-lg-0">
+                <div class="col-sm-3 col-lg-3 text-right mt-lg-0">
                     <a class="text-decoration-none button button-sm button-icon button-default-outline-3 button-zakaria"><span class="icon mdi mdi-email-outline far fa-envelope"></span>Contact us</a>
+                </div>
+                <div class="col-lg-1">
                 </div>
             </div>
         </div>
     </header>
-    <div class="container-fluid mt-4 p-0">
+    <div class="container-fluid navbar-top mt-4 p-0">
         <div class="row navbar-top">
             <div class="col-lg-12">
-                <nav class="navbar navbar-expand-md navbar-light bg-white" role="navigation">
+                <nav class="navbar  navbar-expand-md navbar-light bg-white mx-0 px-0" role="navigation">
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto mt-2 mt-lg-0">
-                            <a asp-controller="Home" class="nav-item nav-link active" asp-action="Index">Home</a>
-                            @await Component.InvokeAsync("CategoryMenu")
-                            <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
-                        </div>
-                        <div>
-                            @{
-                                if (cart != null)
-                                {
-                                    var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
-                                    if (cartTotalItems != 0)
+                        <div class="container-fluid mx-0 px-0">
+                            <div class="col-lg-1"></div>
+                            <div class="navbar-nav mt-2 mt-lg-0 mr-auto ml-0">
+                                <a asp-controller="Home" class="nav-item nav-link active" asp-action="Index">Home</a>
+                                @await Component.InvokeAsync("CategoryMenu")
+                                <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
+                            </div>
+                            <div>
+                                @{
+                                    if (cart != null)
                                     {
-                                        <span>@cartTotalItems</span>
+                                        var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
+                                        if (cartTotalItems != 0)
+                                        {
+                                            <span>@cartTotalItems</span>
+                                        }
                                     }
                                 }
-                            }
-                            <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
+                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
+                            </div>
+                            <partial name="_LoginPartial" />
+                            <div class="col-lg-1"></div>
                         </div>
-                        <partial name="_LoginPartial" />
                     </div>
                 </nav>
             </div>
