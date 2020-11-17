@@ -34,7 +34,7 @@ namespace BethanysPieShop.Controllers
             return View(shoppingCartViewModel);
         }
 
-        public RedirectToActionResult AddToShoppingCart(int pieId)
+        public IActionResult AddToShoppingCart(int pieId)
         {
             var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
 
@@ -42,7 +42,9 @@ namespace BethanysPieShop.Controllers
             {
                 _shoppingCart.AddToCart(selectedPie, 1);
             }
-            return RedirectToAction("Index");
+
+            Response.Headers.Add("Refresh", "2");// in secound
+            return NoContent();
         }
 
         public RedirectToActionResult RemoveFromShoppingCart(int pieId)

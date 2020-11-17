@@ -32,7 +32,7 @@ namespace BethanysPieShop.Models
 
             session.SetString("CartId", cartId);
             var cart = new ShoppingCart(context) { ShoppingCartId = cartId };
-
+            
             return cart;
         }
         

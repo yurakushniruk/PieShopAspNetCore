@@ -1,7 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
-@using Utility
-@inject ShoppingCart cart
+@inject BethanysPieShop.Models.ShoppingCart cart
 @if (IsSectionDefined("Styles"))
 {
     @RenderSection("Styles")
@@ -46,7 +45,7 @@
         </div>
     </header>
     <div class="container-fluid navbar-top mt-4 p-0">
-        <div class="row navbar-top">
+        <div class="row">
             <div class="col-lg-12">
                 <nav class="navbar  navbar-expand-md navbar-light bg-white mx-0 px-0" role="navigation">
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -68,6 +67,7 @@
                                         var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
                                         if (cartTotalItems != 0)
                                         {
+                                            
                                             <span>@cartTotalItems</span>
                                         }
                                     }
@@ -81,8 +81,9 @@
                 </nav>
             </div>
         </div>
-        @RenderBody()
     </div>
+
+    @RenderBody()
 
     @RenderSection("Scripts", required: false)
 
