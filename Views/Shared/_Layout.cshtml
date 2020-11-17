@@ -25,27 +25,23 @@
 </head>
 <body class="bg-white">
     <header>
-        <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4 p-0">
             <div class="row">
-                <div class="col-sm-4 col-lg-4 row row-cols-2">
-                    <div class="col-sm-1 col-lg-7 text-right">
-                        <i class="fas fa-map-marker-alt fa-2x text-left" style="color: #c14679"></i>
-                    </div>
-                    <div class="col-sm-8 col-lg-5 text-left hoverable">
-                        523 Sylvan Ave<br />
-                        Mountain View, CA 94041 USA
-                    </div>
+                <div class="col-sm-4 col-lg-4">                    
+                    <i class="fas fa-map-marker-alt fa-2x text-left float-left mr-2" style="color: #c14679"></i>
+                    523 Sylvan Ave<br />
+                    Mountain View, CA 94041 USA
                 </div>
-                <div class="col-sm-5 col-lg-4 text-center mt-4 mt-lg-0">
+                <div class="col-sm-4 col-lg-4 text-center mt-lg-0">
                     <a asp-controller="Home" asp-action="Index"><img src="~/Images/logo-default-231x49.png" /></a>
                 </div>
-                <div class="col-sm-3 col-lg-4 text-center mt-4 mt-lg-0">
+                <div class="col-sm-4 col-lg-4 text-right mt-lg-0">
                     <a class="text-decoration-none button button-sm button-icon button-default-outline-3 button-zakaria"><span class="icon mdi mdi-email-outline far fa-envelope"></span>Contact us</a>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 p-0">
         <div class="row navbar-top">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-md navbar-light bg-white" role="navigation">
