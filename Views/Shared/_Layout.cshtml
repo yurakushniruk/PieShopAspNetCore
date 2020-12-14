@@ -44,7 +44,7 @@
             </div>
         </div>
     </header>
-    <div class="container-fluid navbar-top mt-4 p-0">
+    <div class="header container-fluid navbar-top p-0" id="stickyHeader">
         <div class="row">
             <div class="col-lg-12">
                 <nav class="navbar  navbar-expand-md navbar-light bg-white mx-0 px-0" role="navigation">
@@ -66,8 +66,8 @@
                                     {
                                         var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
                                         if (cartTotalItems != 0)
-                                        {                                            
-                                            <span>@cartTotalItems</span>
+                                        {
+                                            <span style="color: #c14679">@cartTotalItems</span>
                                         }
                                     }
                                 }
@@ -81,10 +81,27 @@
             </div>
         </div>
     </div>
-
-    @RenderBody()
+    <div class="content">
+        @RenderBody()
+    </div>
 
     @RenderSection("Scripts", required: false)
+    {
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var header = document.getElementById("stickyHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+    }
 
 </body>
 </html>

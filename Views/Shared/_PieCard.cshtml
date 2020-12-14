@@ -21,30 +21,11 @@
         <div class="box-info-modern-text">@Model.ShortDescription</div>
         <div class="box-info-modern-details">
             <span class="box-info-modern-price">$@Model.Price</span>
-            @{
-                var AddToCardEnabled = true;
-
-                if (cart.GetShoppingCartItems().Find(x => x.Pie.PieId == Model.PieId) != null)
-                {
-                    AddToCardEnabled = false;
-                }
-                if (AddToCardEnabled)
-                {
-                    <a asp-controller="ShoppingCart"
-                        asp-action="AddToShoppingCart"
-                        asp-route-pieId="@Model.PieId">
-                        <div class="box-info-modern-link shopping-cart-icon"></div>
-                    </a>
-                }
-                else
-                {
-                    <a asp-controller="ShoppingCart"
-                        asp-action="AddToShoppingCart"
-                        asp-route-pieId="@Model.PieId">
-                        <div class="box-info-modern-link shopping-cart-icon"></div>
-                    </a>
-                }
-            }
+            <a asp-controller="ShoppingCart"
+                asp-action="AddToShoppingCart"
+                asp-route-pieId="@Model.PieId">
+                <div class="box-info-modern-link shopping-cart-icon"></div>
+            </a>
         </div>
     </article>
 </div>
