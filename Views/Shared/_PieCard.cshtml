@@ -21,11 +21,10 @@
         <div class="box-info-modern-text">@Model.ShortDescription</div>
         <div class="box-info-modern-details">
             <span class="box-info-modern-price">$@Model.Price</span>
-            <a asp-controller="ShoppingCart"
-                asp-action="AddToShoppingCart"
-                asp-route-pieId="@Model.PieId">
+            <a class="AddToCartLink" data-id="@Model.PieId">
                 <div class="box-info-modern-link shopping-cart-icon"></div>
             </a>
         </div>
     </article>
 </div>
+

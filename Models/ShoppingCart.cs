@@ -115,5 +115,12 @@ namespace BethanysPieShop.Models
                 .Select(c => c.Pie.Price * c.Amount).Sum();
             return total;
         }
+
+        public int GetShoppingCartCount()
+        {
+            var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+                .Select(c => c.Amount).Sum();
+            return total;
+        }
     }
 }

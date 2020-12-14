@@ -171,7 +171,6 @@ C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\BethanysPieShop.styles.css
-C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.csprojAssemblyReference.cache
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
@@ -184,3 +183,4 @@ C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.csprojAssemblyReference.cache

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BethanysPieShop.Models;
+using BethanysPieShop.Models.ViewModels;
 using BethanysPieShop.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,7 +35,8 @@ namespace BethanysPieShop.Controllers
             return View(shoppingCartViewModel);
         }
 
-        public IActionResult AddToShoppingCart(int pieId)
+        [HttpPost]
+        public ActionResult AddToShoppingCart(int pieId)
         {
             var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
 
@@ -42,9 +44,12 @@ namespace BethanysPieShop.Controllers
             {
                 _shoppingCart.AddToCart(selectedPie, 1);
             }
-
-            Response.Headers.Add("Refresh", "2");// in secound
-            return NoContent();
+            
+            var results = new ShoppingCartRemoveViewModel
+                {
+                    CartCount = _shoppingCart.GetShoppingCartCount()
+                };
+            return Json(results);
         }
 
         public RedirectToActionResult RemoveFromShoppingCart(int pieId)
