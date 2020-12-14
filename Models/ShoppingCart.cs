@@ -31,8 +31,11 @@ namespace BethanysPieShop.Models
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
 
             session.SetString("CartId", cartId);
-            var cart = new ShoppingCart(context) { ShoppingCartId = cartId };
-            
+            var cart = new ShoppingCart(context) 
+                       {   
+                           ShoppingCartId = cartId, 
+                           ShoppingCartItems = context.ShoppingCartItems.Where(x => x.ShoppingCartId == cartId).Include(b=>b.Pie).ToList() 
+                       };
             return cart;
         }
         

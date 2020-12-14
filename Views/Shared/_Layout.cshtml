@@ -66,8 +66,7 @@
                                     {
                                         var cartTotalItems = cart.ShoppingCartItems != null ? cart.ShoppingCartItems.Sum(x => x.Amount) : 0;
                                         if (cartTotalItems != 0)
-                                        {
-                                            
+                                        {                                            
                                             <span>@cartTotalItems</span>
                                         }
                                     }
