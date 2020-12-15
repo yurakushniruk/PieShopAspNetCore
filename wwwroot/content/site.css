@@ -750,6 +750,7 @@ h1, h2, h3, h4, h5, h6, [class^='heading-'] {
     .shopping-cart-icon:hover {
         background-image: url('../images/shopping-cart-hover.svg');
         background-repeat: no-repeat;
+        cursor:pointer;
     }
 
 .box-info-modern:hover .box-info-modern-link::before {
