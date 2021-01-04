@@ -752,6 +752,10 @@ h1, h2, h3, h4, h5, h6, [class^='heading-'] {
         background-repeat: no-repeat;
         cursor:pointer;
     }
+.shopping-cart-icon-checked {
+    background-image: url('../images/shopping-cart-hover.svg');
+    background-repeat: no-repeat;
+}
 
 .box-info-modern:hover .box-info-modern-link::before {
     width: 100%;

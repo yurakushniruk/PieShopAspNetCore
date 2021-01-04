@@ -1,11 +1,12 @@
-﻿@model Pie
+﻿@inject BethanysPieShop.Models.ShoppingCart cart
+@model Pie
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <img class="img-fluid" src="@Model.ImageUrl" alt="@Model.Name">
         </div>
 
-        <div class="col-md-4 text-left">
+        <div class="col-md-6 text-left">
             <h3 class="my-3">@Model.Name</h3>
             <h5>@Model.ShortDescription</h5>
             <p>@Model.LongDescription</p>
@@ -16,9 +17,21 @@
                 <li>Consectetur</li>
                 <li>Adipiscing Elit</li>
             </ul>
-            <div class="addToCart">
-                <a class="button text-decoration-none button-primary button-zakaria" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
-                    asp-route-pieId="@Model.PieId">Add to cart</a>
+            <div id="addButton" class="addToCart">
+                @if (cart.ShoppingCartItems.Any(x => x.Pie.PieId == Model.PieId))
+                {
+                    <a class="button text-decoration-none " data-id="@Model.PieId">
+                        <i class="fas fa-shopping-cart "></i>
+                        Already in cart
+                    </a>
+                }
+                else
+                {
+                    <a class="AddToCartLink button text-decoration-none button-primary button-zakaria" data-id="@Model.PieId">
+                        <i class="fas fa-shopping-cart "></i>
+                        Add to cart
+                    </a>
+                }
             </div>
         </div>
 

@@ -22,7 +22,14 @@
         <div class="box-info-modern-details">
             <span class="box-info-modern-price">$@Model.Price</span>
             <a class="AddToCartLink" data-id="@Model.PieId">
-                <div class="box-info-modern-link shopping-cart-icon"></div>
+                @if (cart.ShoppingCartItems.Any(x => x.Pie.PieId == Model.PieId))
+                {
+                    <div id="addToCartBtn" class="box-info-modern-link shopping-cart-icon-checked"></div>
+                }
+                else
+                {
+                    <div id="addToCartBtn" class="box-info-modern-link shopping-cart-icon"></div>
+                }
             </a>
         </div>
     </article>

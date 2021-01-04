@@ -183,4 +183,3 @@ C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
-C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\obj\Debug\netcoreapp3.1\BethanysPieShop.csprojAssemblyReference.cache

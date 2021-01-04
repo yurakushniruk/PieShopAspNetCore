@@ -102,7 +102,7 @@
 
         $(function () {
             // Document.ready -> link up remove event handler
-            $(".AddToCartLink").click(function () {
+            $(document).on('click', '.AddToCartLink', function (e) {
                 // Get the id from the link
                 var recordToAdd = $(this).attr("data-id");
                 if (recordToAdd != '') {
@@ -110,6 +110,8 @@
                     $.post("/ShoppingCart/AddToShoppingCart", { "pieId": recordToAdd },
                         function (data) {
                             $('#cart-status').text(data.cartCount);
+                            $("#addButton").load(" #addButton");
+                            $(".productsList").load(" .productsList");
                         });
                 }
             });
