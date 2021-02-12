@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Category>
 
 <li class="dropdown">
-    <a asp-controller="Pie"
+    <a asp-area="Customer" asp-controller="Pie"
        asp-action="Index"
        class="nav-item nav-link"
        data-toggle="dropdown">Pies<b class="caret"></b></a>
@@ -9,11 +9,11 @@
         @foreach (var category in Model)
         {
         <li>
-            <a class="nav-item nav-link" asp-controller="Pie" asp-action="List"
+            <a class="nav-item nav-link" asp-area="Customer" asp-controller="Pie" asp-action="List"
                asp-route-category="@category.CategoryName">@category.CategoryName</a>
         </li>
     }
 <li class="dropdown-divider"/>
-        <li><a class="nav-item nav-link" asp-controller="Pie" asp-action="List" asp-route-Category="">View all pies</a></li>
+        <li><a class="nav-item nav-link" asp-area="Customer" asp-controller="Pie" asp-action="List" asp-route-Category="">View all pies</a></li>
     </ul>
 </li>

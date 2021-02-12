@@ -13,6 +13,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
+#line 1 "C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\_ViewImports.cshtml"
+using BethanysPieShop.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\_ViewImports.cshtml"
+using BethanysPieShop.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\Yura\Source\Repos\BethanyPieShop\BethanyPieShop\Areas\Identity\Pages\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
@@ -34,6 +48,7 @@ using BethanysPieShop.Areas.Identity.Pages;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bb784f8d0078bf8518117e1c256708d4c02699c", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6d87bd1b60e12153958fdd371593f88fb1829259", @"/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

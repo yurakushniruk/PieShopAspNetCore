@@ -4,7 +4,7 @@
 {
     <ul class="nav navbar-nav">
         <li>
-            <a asp-controller="ShoppingCart" asp-action="Index">
+            <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index">
                 <span class="glyphicon glyphicon-shopping-cart"></span>
                 <span id="cart-status">
                     @Model.ShoppingCart.ShoppingCartItems.Count

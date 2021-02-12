@@ -34,7 +34,7 @@
                     Mountain View, CA 94041 USA
                 </div>
                 <div class="col-sm-4 col-lg-4 text-center mt-lg-0">
-                    <a asp-controller="Home" asp-action="Index"><img src="~/Images/logo-default-231x49.png" /></a>
+                    <a asp-area="Customer" asp-controller="Home" asp-action="Index"><img src="~/Images/logo-default-231x49.png" /></a>
                 </div>
                 <div class="col-sm-3 col-lg-3 text-right mt-lg-0">
                     <a class="text-decoration-none button button-sm button-icon button-default-outline-3 button-zakaria"><span class="icon mdi mdi-email-outline far fa-envelope"></span>Contact us</a>
@@ -56,9 +56,13 @@
                         <div class="container-fluid mx-0 px-0">
                             <div class="col-lg-1"></div>
                             <div class="navbar-nav mt-2 mt-lg-0 mr-auto ml-0">
-                                <a asp-controller="Home" class="nav-item nav-link active" asp-action="Index">Home</a>
+                                <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="nav-item nav-link active">Home</a>
                                 @await Component.InvokeAsync("CategoryMenu")
-                                <a asp-controller="Contact" class="nav-item nav-link" asp-action="Index">Contact</a>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-area="Administration" asp-controller="Order" asp-action="Index" class="nav-item nav-link">Orders</a>
+                                }
+                                <a asp-area="Customer" asp-controller="Contact" asp-action="Index" class="nav-item nav-link">Contact</a>
                             </div>
                             <div>
                                 @{
@@ -70,7 +74,7 @@
                                         }
                                     </span>
                                 }
-                                <a asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
+                                <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index" class="shopping-cart-nav shopping-cart-icon"></a>
                             </div>
                             <partial name="_LoginPartial" />
                             <div class="col-lg-1"></div>
@@ -107,7 +111,7 @@
                 var recordToAdd = $(this).attr("data-id");
                 if (recordToAdd != '') {
                     // Perform the ajax post
-                    $.post("/ShoppingCart/AddToShoppingCart", { "pieId": recordToAdd },
+                    $.post("/Customer/ShoppingCart/AddToShoppingCart", { "pieId": recordToAdd },
                         function (data) {
                             $('#cart-status').text(data.cartCount);
                             $("#addButton").load(" #addButton");

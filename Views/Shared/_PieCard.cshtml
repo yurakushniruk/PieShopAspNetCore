@@ -5,13 +5,15 @@
 @model Pie
 <div class="product-column">
     <article class="box-info-modern box-info-modern-figure">
-        <a asp-controller="Pie"
+        <a asp-area="Customer" 
+           asp-controller="Pie"
            asp-action="Details"
            asp-route-id="@Model.PieId">
             <img class="inner-img" src="@Model.ImageThumbnailUrl" alt="">
         </a>
         <h6 class="box-info-modern-title">
-            <a asp-controller="Pie"
+            <a asp-area="Customer" 
+               asp-controller="Pie"
                asp-action="Details"
                asp-route-id="@Model.PieId">
                 @Model.Name

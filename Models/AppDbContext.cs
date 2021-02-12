@@ -12,7 +12,6 @@ namespace BethanysPieShop.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Pie> Pies { get; set; }
