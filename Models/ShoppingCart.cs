@@ -63,7 +63,7 @@ namespace BethanysPieShop.Models
             _appDbContext.SaveChanges();
         }
 
-        public int RemoveFromCart(Pie pie)
+        public int MinusFromCart(Pie pie)
         {
             var shoppingCartItem =
                     _appDbContext.ShoppingCartItems.SingleOrDefault(
@@ -89,13 +89,30 @@ namespace BethanysPieShop.Models
             return localAmount;
         }
 
+        public int RemoveFromCart(Pie pie)
+        {
+            var shoppingCartItem =
+                    _appDbContext.ShoppingCartItems.SingleOrDefault(
+                        s => s.Pie.PieId == pie.PieId && s.ShoppingCartId == ShoppingCartId);
+
+            var localAmount = 0;
+
+            if (shoppingCartItem != null)
+            {
+                _appDbContext.ShoppingCartItems.Remove(shoppingCartItem);
+            }
+
+            _appDbContext.SaveChanges();
+
+            return localAmount;
+        }
+
         public List<ShoppingCartItem> GetShoppingCartItems()
         {
-            return ShoppingCartItems ??
-                   (ShoppingCartItems =
+            return ShoppingCartItems ??=
                        _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                            .Include(s => s.Pie)
-                           .ToList());
+                           .ToList();
         }
 
         public void ClearCart()

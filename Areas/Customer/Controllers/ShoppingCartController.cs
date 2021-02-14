@@ -53,9 +53,9 @@ namespace BethanysPieShop.Controllers
             return Json(results);
         }
 
-        public RedirectToActionResult RemoveFromShoppingCart(int pieId)
+        public RedirectToActionResult RemoveFromShoppingCart(int id)
         {
-            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
+            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == id);
 
             if (selectedPie != null)
             {
@@ -64,9 +64,9 @@ namespace BethanysPieShop.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult PlusOne(int pieId)
+        public IActionResult PlusOne(int id)
         {
-            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
+            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == id);
 
             if (selectedPie != null)
             {
@@ -76,13 +76,13 @@ namespace BethanysPieShop.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult MinusOne(int pieId)
+        public IActionResult MinusOne(int id)
         {
-            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == pieId);
+            var selectedPie = _pieRepository.AllPies.FirstOrDefault(p => p.PieId == id);
 
             if (selectedPie != null)
             {
-                _shoppingCart.RemoveFromCart(selectedPie);
+                _shoppingCart.MinusFromCart(selectedPie);
             }
 
             return RedirectToAction("Index");
