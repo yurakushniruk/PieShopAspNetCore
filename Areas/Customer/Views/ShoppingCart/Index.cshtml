@@ -22,9 +22,9 @@
                         </div>
                     </div>
                     <div class="d-flex flex-row align-items-center qty">
-                        <i class="fa fa-minus text-danger"></i>
+                        <a asp-area="Customer" asp-action="MinusOne" asp-route-id="@line.Pie.PieId"><i class="fa fa-minus text-danger"></i></a>
                         <h5 class="text-grey mt-1 mr-1 ml-1">@line.Amount</h5>
-                        <i class="fa fa-plus text-success"></i>
+                        <a asp-area="Customer" asp-action="PlusOne" asp-route-id="@line.Pie.PieId"><i class="fa fa-plus text-success"></i></a>
                     </div>
                     <div>
                         <h5 class="text-grey">@((line.Amount * line.Pie.Price).ToString("c"))</h5>
